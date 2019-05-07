@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "report_type": {
+            "required": true,
+            "type": "string"
+        },
+        "sites": {
+            "required": true,
+            "type": "string"
+        },
+        "start_date": {
+            "required": true,
+            "type": "string"
+        },
+        "end_date": {
+            "required": true,
+            "type": "string"
+        },
+        "page": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "page_size": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "reportSubTypeId": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

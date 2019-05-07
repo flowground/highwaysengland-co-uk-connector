@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "sites": {
+            "required": true,
+            "type": "string"
+        },
+        "start_date": {
+            "required": true,
+            "type": "string"
+        },
+        "end_date": {
+            "required": true,
+            "type": "string"
+        },
+        "version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

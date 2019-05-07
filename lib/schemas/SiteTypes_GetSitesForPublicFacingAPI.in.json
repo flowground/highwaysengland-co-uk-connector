@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "siteType_Id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

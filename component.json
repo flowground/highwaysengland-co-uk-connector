@@ -1,0 +1,195 @@
+{
+    "title": "Highways England API",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/highwaysengland.co.uk/v1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://webtris.highwaysengland.co.uk/api",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_v_version__areas": {
+            "main": "./lib/actions/get_v_version__areas.js",
+            "title": "Returns list of areas",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v_version__areas.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v_version__areas__area_Ids_": {
+            "main": "./lib/actions/get_v_version__areas__area_Ids_.js",
+            "title": "Returns details of selected area",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v_version__areas__area_Ids_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Quality_GetDailyDataQualityForSite": {
+            "main": "./lib/actions/Quality_GetDailyDataQualityForSite.js",
+            "title": "Get Site DailyQuality",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Quality_GetDailyDataQualityForSite.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Quality_GetOverallDataQualityForSites": {
+            "main": "./lib/actions/Quality_GetOverallDataQualityForSites.js",
+            "title": "Get Site OverallQuality",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Quality_GetOverallDataQualityForSites.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v_version__reports__report_type_": {
+            "main": "./lib/actions/get_v_version__reports__report_type_.js",
+            "title": "Gets the daily report.",
+            "description": "Get's the report.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v_version__reports__report_type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v_version__reports__start_date__to__end_date___report_type_": {
+            "main": "./lib/actions/get_v_version__reports__start_date__to__end_date___report_type_.js",
+            "title": "Gets the daily report.",
+            "description": "Get's the report.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v_version__reports__start_date__to__end_date___report_type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v_version__sites": {
+            "main": "./lib/actions/get_v_version__sites.js",
+            "title": "Get a list of sites",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v_version__sites.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v_version__sites__site_Ids_": {
+            "main": "./lib/actions/get_v_version__sites__site_Ids_.js",
+            "title": "Get selected sites",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v_version__sites__site_Ids_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SiteTypes_Index": {
+            "main": "./lib/actions/SiteTypes_Index.js",
+            "title": "Return list of site types",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SiteTypes_Index.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SiteTypes_GetSitesForPublicFacingAPI": {
+            "main": "./lib/actions/SiteTypes_GetSitesForPublicFacingAPI.js",
+            "title": "Returns the layer metadata for the LayerId specified.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SiteTypes_GetSitesForPublicFacingAPI.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

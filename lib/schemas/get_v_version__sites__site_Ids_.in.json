@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "site_Ids": {
+            "required": true,
+            "type": "string"
+        },
+        "version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
